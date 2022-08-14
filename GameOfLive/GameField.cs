@@ -7,7 +7,7 @@ namespace GameOfLive
 {
     internal class GameField : IEnumerable<string>
     {
-        private const string LIVE = "*";
+        private const string LIVE = "\u25A0";
         private const string SPACE = " ";
 
         private string[,] _gameField;

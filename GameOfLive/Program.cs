@@ -22,6 +22,7 @@ namespace GameOfLive
                 var gameField = new GameField(HEIGHT, WIDTH);
                 var fileInput = ReadInputDataFromFile(args[0]);
                 var livingCells = GetInitialLivingCells(fileInput);
+
                 gameField.SetInitialLive(livingCells);
                 Render(gameField);
             }
@@ -34,15 +35,17 @@ namespace GameOfLive
 
         private static void Render(GameField gameField)
         {
-            Console.BackgroundColor = ConsoleColor.White;
-            Console.ForegroundColor = ConsoleColor.Blue;
-
+            Console.OutputEncoding = System.Text.Encoding.UTF8;
             while (true)
             {
                 Console.Clear();
+                Console.BackgroundColor = ConsoleColor.White;
+                Console.ForegroundColor = ConsoleColor.Blue;
 
                 foreach (var row in gameField)
                     Console.WriteLine(row);
+
+                Console.ResetColor();
 
                 gameField.NewTick();
                 Thread.Sleep(300);
