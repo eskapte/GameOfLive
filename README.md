@@ -2,4 +2,4 @@
 My implementation the "Game of life"
 
 ### Скриншот
-![Пример]("screenshot.png")
+![Пример]("screenshot.jpg")
