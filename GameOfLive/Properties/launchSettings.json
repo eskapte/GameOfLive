@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "GameOfLive": {
+      "commandName": "Project",
+      "commandLineArgs": "initialValues.txt"
+    }
+  }
+}
